@@ -1,0 +1,10 @@
+# IDE
+.idea
+
+# Node
+node_modules/
+
+# Logs
+ui-debug.log
+firebase-debug.log
+yarn-error.log
