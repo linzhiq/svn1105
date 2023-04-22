@@ -1,0 +1,22 @@
+{
+  "name": "svn1105",
+  "devDependencies": {
+    "firebase-tools": "^11.25.3",
+    "prettier": "^2.5.1",
+    "typescript": "^5.0.4",
+    "yarn": "^1.22.19"
+  },
+  "private": true,
+  "scripts": {
+    "build": "yarn --cwd ./doorbird/ build",
+    "deploy": "firebase deploy",
+    "debug:build": "yarn --cwd ./doorbird/ build:watch",
+    "debug:serve": "firebase emulators:start",
+    "debug:tunnel": "cloudflared tunnel --url http://localhost:5002",
+    "debug": "yarn debug:build & yarn debug:serve & yarn debug:tunnel",
+    "format": "prettier --write ."
+  },
+  "workspaces": [
+    "doorbird"
+  ]
+}

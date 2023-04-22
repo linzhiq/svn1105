@@ -1,0 +1,25 @@
+{
+  "name": "@svn1105/doorbird",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "yarn build && firebase emulators:start --only functions",
+    "shell": "yarn build && firebase functions:shell",
+    "start": "yarn shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.6.0",
+    "firebase-functions": "^4.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "version": "0.0.1",
+  "private": true
+}
