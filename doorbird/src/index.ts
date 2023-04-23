@@ -88,18 +88,10 @@ export const doorbird = functions
           timeZone: "America/Los_Angeles",
         });
 
-        console.log({
-          from: `Email Sender <mailgun@${secrets.MAILGUN_DOMAIN}>`,
-          to: `roomies.svn@icloud.com`,
-          subject: `Entrance on ${formatter.format(Date.now())}`,
-          text: `Call from ${Caller} (${CallerState}, ${CallerCountry})`,
-          inline: imageBuffer,
-        });
-
         await mg.messages.create(secrets.MAILGUN_DOMAIN, {
           from: `Email Sender <mailgun@${secrets.MAILGUN_DOMAIN}>`,
           to: `roomies.svn@icloud.com`,
-          subject: `Entrance on ${new Date().toTimeString()}`,
+          subject: `Entrance on ${formatter.format(Date.now())}`,
           html: `Call from ${Caller} (${CallerState}, ${CallerCountry}) <br> <img alt="image" id="1" src="cid:image.jpg"/>`,
           inline: {
             filename: "image.jpg",
