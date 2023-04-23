@@ -104,7 +104,7 @@ export const doorbird = functions
 
       const respondOnPhone = async () => {
         const twiml = new VoiceResponse();
-        twiml.say({ voice: "matthew" }, `The door is opening`);
+        twiml.say({ voice: "matthew" }, `The door has opened`);
 
         response.type("text/xml");
         response.send(twiml.toString());
