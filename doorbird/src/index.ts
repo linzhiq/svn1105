@@ -82,10 +82,10 @@ export const doorbird = functions
 
         const formatter = new Intl.DateTimeFormat("en-US", {
           hour: "numeric",
-          hour12: false,
+          hour12: true,
           minute: "numeric",
-          weekday: "long",
-          timeZone: "Asia/Tokyo",
+          weekday: "short",
+          timeZone: "America/Los_Angeles",
         });
 
         console.log({
