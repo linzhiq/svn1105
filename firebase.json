@@ -1,7 +1,7 @@
 {
   "functions": [
     {
-      "source": "mailgun",
+      "source": "doorbird",
       "codebase": "default",
       "ignore": [
         "node_modules",
@@ -15,8 +15,8 @@
   "hosting": {
     "rewrites": [
       {
-        "source": "/mailgun/webhooks/**",
-        "function": "mailgun__webhooks"
+        "source": "/doorbird/**",
+        "function": "doorbird"
       }
     ]
   }
